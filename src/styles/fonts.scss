@@ -1,15 +1,13 @@
 @mixin font-face($name, $path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $name;
-    src:
-      url('#{$path}.woff2') format('woff2'),
-      url('#{$path}.woff') format('woff');
+    src: url('#{$path}.woff2') format('woff2');
     font-weight: $weight;
     font-style: $style;
     font-display: swap;
   }
 }
 
-@include font-face('Montserrat', '../assets/fonts/Montserrat/Montserrat-Regular', 400);
-@include font-face('Montserrat', '../assets/fonts/Montserrat/Montserrat-Bold', 700);
-@include font-face('Montserrat', '../assets/fonts/Montserrat/Montserrat-Medium', 500);
+@include font-face('Jost', '../assets/fonts/Jost/Jost-Regular', 400);
+@include font-face('Jost', '../assets/fonts/Jost/Jost-Bold', 700);
+@include font-face('Jost', '../assets/fonts/Jost/Jost-SemiBold', 600);
