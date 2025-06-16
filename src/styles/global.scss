@@ -57,12 +57,14 @@ section {
   user-select: none;
   background-color: $controls-bg-primary;
   color: $controls-color-primary;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   &:hover {
     background-color: $controls-bg-primary-hover;
   }
-  
+
   &--dark {
     background-color: $controls-bg-secondary;
 
