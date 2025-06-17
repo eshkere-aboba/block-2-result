@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+.about {
+  &__description {
+    font-size: 30px;
+    max-width: 890px;
+  }
+
+  .about-items {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+
+    .about-item {
+      flex-basis: 260px;
+
+      &__number {
+        font-size: 70px;
+        font-weight: 600;
+        color: $text-color-accent;
+      }
+
+      &__text {
+        font-size: 18px;
+        color: $text-color-quaternary;
+      }
+    }
+  }
+}
