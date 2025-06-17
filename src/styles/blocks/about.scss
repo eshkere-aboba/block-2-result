@@ -13,16 +13,16 @@
     justify-content: center;
     gap: 40px;
 
-    .about-item {
+    .about-stat {
       flex-basis: 260px;
 
-      &__number {
+      &__value {
         font-size: 70px;
         font-weight: 600;
         color: $text-color-accent;
       }
 
-      &__text {
+      &__caption {
         font-size: 18px;
         color: $text-color-quaternary;
       }
