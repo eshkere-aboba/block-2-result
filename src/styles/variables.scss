@@ -15,6 +15,7 @@ $text-color-accent: $accent-color;
 // Фоны
 $bg-color-primary: $secondary-color;
 $bg-color-secondary: $primary-color;
+$bg-color-tertiary: #f9f9f9;
 $bg-color-accent: $accent-color;
 
 // Кнопки и элементы управления
@@ -22,4 +23,8 @@ $controls-bg-primary: $accent-color;
 $controls-bg-primary-hover: #b9191d;
 $controls-bg-secondary: $primary-color;
 $controls-bg-secondary-hover: #282148;
+$controls-bg-tertiary: #e7e6e8;
 $controls-color-primary: $secondary-color;
+
+// Тени
+$shadow-light: 0 2px 8px 0 #14102419;
