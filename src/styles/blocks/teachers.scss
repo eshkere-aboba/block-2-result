@@ -1,0 +1,107 @@
+@use '../variables' as *;
+
+.teachers {
+  padding: 120px 0 0;
+
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  &__slider {
+    margin-top: 60px;
+
+    .slider {
+      &__items {
+        display: flex;
+        overflow-x: scroll;
+        gap: 40px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .teacher-card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-basis: 360px;
+          flex-shrink: 0;
+          user-select: none;
+
+          &__image {
+            width: 100%;
+            height: 100%;
+            max-height: 500px;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+
+          &__description {
+            margin-top: 20px;
+          }
+
+          &__title {
+            font-weight: 600;
+            font-size: 24px;
+          }
+
+          &__role {
+            font-size: 18px;
+            color: $text-color-quaternary;
+          }
+
+          &__button {
+            margin-top: 20px;
+            font-size: 18px;
+            color: $controls-color-secondary;
+          }
+        }
+      }
+
+      .slider-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 60px;
+
+        .slider-scrollbar {
+          width: 360px;
+          height: 5px;
+          background-color: $controls-bg-tertiary;
+          border-radius: 40px;
+
+          &__thumb {
+            width: 260px;
+            height: 100%;
+            border-radius: 40px;
+            background-color: $controls-bg-secondary;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scaleY(1.1);
+            }
+          }
+        }
+
+        &__buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          button {
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
