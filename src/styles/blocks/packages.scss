@@ -1,0 +1,86 @@
+@use '../variables' as *;
+
+.packages {
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 60px;
+
+    .package-card {
+      flex-basis: 360px;
+      padding: 40px;
+      border: 1px solid $bg-stroke-color;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+      &:hover {
+        background-color: $bg-color-secondary;
+        color: $text-color-secondary;
+        transform: scale(1.03);
+
+        :before,
+        :after {
+          background-color: $bg-color-primary;
+        }
+      }
+
+      &__header {
+        position: relative;
+        font-weight: 600;
+        font-size: 30px;
+
+        &:before {
+          left: -30px;
+        }
+
+        &:after {
+          right: -30px;
+        }
+
+        &:before,
+        &:after {
+          position: absolute;
+          content: '';
+          top: 50%;
+          transform: translateY(-50%);
+          height: 4px;
+          width: 19px;
+          background-color: $text-color-primary;
+          transition: background-color 0.3s ease;
+        }
+      }
+
+      &__price {
+        margin-top: 83px;
+        font-weight: 600;
+        font-size: 50px;
+      }
+
+      &__description {
+        margin-top: 20px;
+        font-size: 18px;
+        margin-bottom: 52px;
+      }
+
+      &__button {
+        margin-top: auto;
+        width: 100%;
+      }
+    }
+  }
+}

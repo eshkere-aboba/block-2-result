@@ -4,11 +4,12 @@ $font-main: 'Jost', sans-serif;
 $primary-color: #141024;
 $secondary-color: #ffffff;
 $accent-color: #d52027;
+$light-gray: #b8b7bd;
 
 // Цвета текста
 $text-color-primary: $primary-color;
 $text-color-secondary: $secondary-color;
-$text-color-tertiary: #b8b7bd;
+$text-color-tertiary: $light-gray;
 $text-color-quaternary: #5b5866;
 $text-color-accent: $accent-color;
 
@@ -17,6 +18,7 @@ $bg-color-primary: $secondary-color;
 $bg-color-secondary: $primary-color;
 $bg-color-tertiary: #f9f9f9;
 $bg-color-accent: $accent-color;
+$bg-stroke-color: $light-gray;
 
 // Кнопки и элементы управления
 $controls-bg-primary: $accent-color;
