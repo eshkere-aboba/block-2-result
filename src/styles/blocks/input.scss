@@ -1,0 +1,18 @@
+@use '../variables' as *;
+
+.input {
+  width: 100%;
+  padding: 19px 20px;
+  background-color: $controls-bg-quaternary;
+  border-radius: 5px;
+  font-size: 18px;
+
+  &:focus {
+    border-color: $controls-bg-secondary;
+    outline: none;
+  }
+
+  &.error {
+    border-color: $controls-color-secondary;
+  }
+}
