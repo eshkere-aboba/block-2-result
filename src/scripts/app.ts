@@ -5,4 +5,4 @@ import '../styles/main.scss';
 // import logo from '../assets/images/webpack-logo.png';
 
 // Импорт всех скриптов
-import './script.js';
+import './slider.js';
