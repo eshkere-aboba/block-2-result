@@ -3,21 +3,22 @@ const slideButtons = document.querySelectorAll('.slider-controls__button');
 const sliderScrollbar = document.querySelector('.slider-scrollbar');
 const scrollbarThumb = document.querySelector('.slider-scrollbar__thumb');
 
-let sliderMaxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-scrollbarThumb.style.width = `${(imageList.clientWidth / imageList.scrollWidth) * 100}%`;
-const updateMaxScrollLeft = () => {
-  sliderMaxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+const calculateMaxScrollLeft = () => {
+  return imageList.scrollWidth - imageList.clientWidth;
 };
 const updateScrollbarWidth = () => {
   scrollbarThumb.style.width = `${(imageList.clientWidth / imageList.scrollWidth) * 100}%`;
 };
+let sliderMaxScrollLeft = calculateMaxScrollLeft();
+updateScrollbarWidth();
 
+const createSlideButtonClickHandler = (buttonId) => () => {
+  const direction = buttonId === 'btn-prev' ? -1 : 1;
+  let scrollAmount = sliderScrollbar.clientWidth * direction;
+  imageList.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+};
 slideButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const direction = button.id === 'btn-prev' ? -1 : 1;
-    let scrollAmount = sliderScrollbar.clientWidth * direction;
-    imageList.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  });
+  button.addEventListener('click', createSlideButtonClickHandler(button.id));
 });
 
 const updateThumbPosition = () => {
@@ -63,6 +64,6 @@ document.addEventListener('mousedown', (mouseDownEvent) => {
 });
 
 window.addEventListener('resize', () => {
-  updateMaxScrollLeft();
+  sliderMaxScrollLeft = calculateMaxScrollLeft();
   updateScrollbarWidth();
 });
