@@ -39,6 +39,7 @@ document.addEventListener('mousedown', (mouseDownEvent) => {
   const startX = mouseDownEvent.clientX;
   const thumbPosition = scrollbarThumb.offsetLeft;
   document.body.style.cursor = 'grabbing';
+  scrollbarThumb.style.cursor = 'grabbing';
   document.body.style.userSelect = 'none';
 
   const handleMouseMove = (mouseMoveEvent) => {
@@ -54,6 +55,7 @@ document.addEventListener('mousedown', (mouseDownEvent) => {
 
   const handleMouseUp = () => {
     document.body.style.cursor = 'default';
+    scrollbarThumb.style.cursor = 'grab';
     document.body.style.userSelect = '';
     document.removeEventListener('mousemove', handleMouseMove);
     document.removeEventListener('mouseup', handleMouseUp);
