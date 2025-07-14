@@ -13,7 +13,7 @@
     outline: none;
   }
 
-  &.error {
+  &--invalid {
     border-color: $controls-color-secondary;
   }
 }
